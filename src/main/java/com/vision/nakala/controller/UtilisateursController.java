@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.vision.nakala.error.ResourceNotFoundException;
 import com.vision.nakala.model.Utilisateurs;
-import com.vision.nakala.service.UtilisateursService;
+import com.vision.nakala.service.UtilisateurService;
 
 @RestController
 @RequestMapping("/api")
 public class UtilisateursController {
 
 	@Autowired
-	UtilisateursService utilisateurService;
+	UtilisateurService utilisateurService;
 
 	@PostMapping("/users")
 	public ResponseEntity<Utilisateurs> createUsers(@Valid @RequestBody Utilisateurs user) {
